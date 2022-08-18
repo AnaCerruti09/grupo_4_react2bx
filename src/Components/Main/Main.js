@@ -12,10 +12,11 @@ function Main(){
         <div className="Main">
             <Header />
             <br/>
-            <UserSumUp />
-            <br />
-            <ProductSumUp />
-
+            <div className="MainContent">
+                <UserSumUp />
+                 <br />
+                <ProductSumUp />
+            </div>
             <Footer />
         </div>)
 }

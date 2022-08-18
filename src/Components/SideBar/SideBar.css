@@ -1,6 +1,6 @@
 .SideBar{
     display: block;
-    width: 30%;
+    width: 25%;
     background-color: black;
     color: #79ffa0;
     font-weight: bold;
@@ -8,7 +8,7 @@
 }
 
 .logo{
-    width: 30%;
+    width: 50%;
     padding: 5px;
     margin: 10px;
 }
@@ -29,5 +29,15 @@
 
 .Link{
     text-decoration: none;
+    color: #79ffa0;
 }
 
+
+@media (min-width: 769px){
+    .SideBar{
+        width: 20%;
+    }
+    .logo{
+        width: 35%;
+    }
+}

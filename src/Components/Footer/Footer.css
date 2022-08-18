@@ -1,20 +1,9 @@
-.Main{
-    width: 75%;
+.Footer{
     background-color: #FBFBFB;
-
-
-}
-
-.MainContent{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-
-
-@media (min-width: 769px){
-    .Main{
-        width: 80%;
-    }
+    margin-top: 20px;
+    margin-bottom: 5px;
 }

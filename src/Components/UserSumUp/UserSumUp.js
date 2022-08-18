@@ -1,4 +1,7 @@
 import React from "react"
+import "./UserSumUp.css"
+
+import IconUser from "../../Assets/img/user_icon.png"
 
 import { useState, useEffect } from "react"
 
@@ -23,19 +26,19 @@ function UserSumUp(){
     return(
     <React.Fragment>
         <div className="ContainerSumUp">
-            <div><h2 className="SumUpTitle">User Sum Up Dashboard</h2></div>
+            <div className="TitleContainer"><h2 className="SumUpTitle">User Sum Up Dashboard</h2></div>
             <div className="ContentSumUP">
-                <div className="lastInDB">
+                
                     
                         { users.length !== 0 &&
                            <div className="cardLast"> 
+                            <img className="IconUser" src={IconUser} alt="icono usuario" />
                             <h5>{lastUser.name}</h5>
                             <span>{lastUser.email}</span>
                            </div>
                         }
                     
-                </div>
-                <div className="totalInDB">
+                
                         {
                             totalUsers !== 0 &&
                             <div className="cardTotal">
@@ -43,7 +46,7 @@ function UserSumUp(){
                                 <span>{totalUsers}</span>
                             </div>
                         }
-                </div>
+                
 
             </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react"
+import "./ProductSumUp.css"
 
 import { useState, useEffect } from "react"
 
@@ -23,9 +24,9 @@ function ProductSumUp(){
     return(
     <React.Fragment>
         <div className="ContainerSumUp">
-            <div><h2 className="SumUpTitle">Product Sum Up Dashboard</h2></div>
+            <div className="TitleContainer"><h2 className="SumUpTitle">Product Sum Up Dashboard</h2></div>
             <div className="ContentSumUP">
-                <div className="lastInDB">
+                
                     
                         { products.length !== 0 &&
                            <div className="cardLast"> 
@@ -34,8 +35,8 @@ function ProductSumUp(){
                            </div>
                         }
                     
-                </div>
-                <div className="totalInDB">
+                
+                
                         {
                             totalProducts !== 0 &&
                             <div className="cardTotal">
@@ -43,7 +44,7 @@ function ProductSumUp(){
                                 <span>{totalProducts}</span>
                             </div>
                         }
-                </div>
+               
 
             </div>
         </div>
