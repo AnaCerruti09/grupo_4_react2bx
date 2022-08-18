@@ -1,0 +1,33 @@
+.SideBar{
+    display: block;
+    width: 30%;
+    background-color: black;
+    color: #79ffa0;
+    font-weight: bold;
+    height: 100%;
+}
+
+.logo{
+    width: 30%;
+    padding: 5px;
+    margin: 10px;
+}
+
+.NavigationContainer{
+    margin-top: 20px;
+    padding: 5px;
+
+}
+
+.NavigationLink{
+    margin-top: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    border-bottom: 1px solid #79ffa0;
+    color: #79ffa0;
+}
+
+.Link{
+    text-decoration: none;
+}
+

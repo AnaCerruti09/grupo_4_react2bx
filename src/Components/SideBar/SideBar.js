@@ -8,24 +8,29 @@ import SearchUser from "../SearchUser/SearchUser"
 import SearchProduct from "../SearchProduct/SearchProduct"
 import NotFound from "../NotFound/NotFound"
 
+import Logo from "../../Assets/img/Logo1FondoNegro.jpg"
+import "./SideBar.css"
+
 function SideBar(){
     return(
     <React.Fragment>
     <div className="SideBar">
-        <div>Aca va el Logo</div>
+        <div>
+            <img className="logo" src={Logo} alt="Logo 2BX" />
+        </div>
         <div className="NavigationContainer">
             <ul>
-                <li className="NavigationLink"><Link to="/"><span>Main Dashboard</span></Link></li>
+                <li className="NavigationLink"><Link to="/" style={{ textDecoration: 'none' }}><span>Main Dashboard</span></Link></li>
 
-                <li className="NavigationLink"><Link to="/Users"><span>Users Dashboard</span></Link></li>
+                <li className="NavigationLink"><Link to="/Users" style={{ textDecoration: 'none' }}><span>Users Dashboard</span></Link></li>
 
-                <li className="NavigationLink"><Link to="/Products"><span>Products Dashboard</span></Link></li>
+                <li className="NavigationLink"><Link to="/Products" style={{ textDecoration: 'none' }}><span>Products Dashboard</span></Link></li>
 
-                <li className="NavigationLink"><Link to="/SearchProduct"><span>Product Search</span></Link></li>
+                <li className="NavigationLink"><Link to="/SearchProduct" style={{ textDecoration: 'none' }}><span>Product Search</span></Link></li>
 
-                <li className="NavigationLink"><Link to="/SearchUser"><span>User Search</span></Link></li>
+                <li className="NavigationLink"><Link to="/SearchUser" style={{ textDecoration: 'none' }}><span>User Search</span></Link></li>
 
-            <hr />
+            
             </ul>
         </div>
     </div>

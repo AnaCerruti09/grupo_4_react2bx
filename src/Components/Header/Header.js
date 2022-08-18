@@ -1,5 +1,6 @@
 import React from "react"
-import UserLogo from "../../Assets/img/UserLogo.png"
+import UserLogo from "../../Assets/img/icon-default.jpg"
+import "./Header.css"
 
 function Header(){
     return(

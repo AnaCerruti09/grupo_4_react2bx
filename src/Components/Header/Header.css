@@ -1,0 +1,19 @@
+.Header{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: black;
+
+}
+
+.UserLogged{
+    display: flex;
+    align-items: center;
+    color:#79ffa0;
+    padding: 5px;
+}
+
+.FotoUsuario{
+    border: 50%;
+    width: 40px;
+    padding: 5px;
+}

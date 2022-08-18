@@ -5,6 +5,8 @@ import Footer from "../Footer/Footer"
 import UserSumUp from "../UserSumUp/UserSumUp"
 import ProductSumUp from "../ProductSumUp/ProductSumUp"
 
+import "./Main.css"
+
 function Main(){
     return(
         <div className="Main">
