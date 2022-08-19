@@ -1,7 +1,93 @@
 import React from "react"
+import { useState, useEffect, useRef} from "react"
+import IconUser from "../../Assets/img/user_icon.png"
 
 function SearchUser(){
-    return(<div className="SearchUser">Search User</div>)
+    const [users, setUsers] = useState([])
+	const [keyword, setKeyword] = useState("")
+
+
+	const input = useRef()
+	
+
+	useEffect( () => {
+		const API = `http://localhost:3030/api/users/searchUsers/${keyword}`
+		
+		fetch(API)
+		.then(res => res.json())
+		.then(data => {
+			if(data.data == undefined) {
+				setUsers([])
+			}else{
+				setUsers(data.data)}})
+		.catch(error => console.log(error))
+ 
+	}, [keyword])
+
+	const search= (e) => {
+		e.preventDefault()
+
+		setKeyword(input.current.value)
+	}
+
+	return(
+		<div className="SearchContainer">
+				<>
+					<div className="SearchHead">
+						<div className="SearchForm">
+							{/* Buscador */}
+							<form method="GET" onSubmit={search}>
+								<div className="form-group">
+									<label htmlFor="">Buscar por nombre:</label>
+									<input ref={input} type="text" className="SearchInput" />
+								</div>
+								<button className="SearchButton">Search</button>
+							</form>
+						</div>
+					</div>
+					<div className="SearchResult">
+						<div className="SearchResultTitle">
+							<h2>Usuarios con nombre: {keyword}</h2>
+						</div>
+						{/* Listado de películas */}
+						{
+							users.length > 0 && users.map((user, i) => {
+								return (
+									<div className="CardResult" key={i}>
+
+											<div className="CardHeader">
+												<h5 className="ResultTitle">{user.email}</h5>
+											</div>
+											<div className="CardBody">
+												<div className="ConteinerIcon">
+													<img 
+														className="IconUser" 
+														src={IconUser}
+														alt="icono usuario"
+														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
+													/>
+												</div>
+												<p>{user.name}</p>
+                                                <p>{user.last_name}</p>
+                                                <p>{user.birth_date}</p>
+											</div>
+										
+									</div>
+								)
+							})
+						}
+					</div>
+					
+					{users.length === 0 && (
+            			<div className="AlertSearch">
+             				 No se encontraron usuarios
+            			</div>
+          			)}
+
+				</>
+		</div>
+	)
+
 }
 
 export default SearchUser
