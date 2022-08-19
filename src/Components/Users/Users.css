@@ -1,0 +1,21 @@
+.Users{
+    width: 75%;
+    background-color: #FBFBFB;
+    height: 100%;
+
+
+}
+
+.MainContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+@media (min-width: 769px){
+    .Users{
+        width: 80%;
+    }
+}

@@ -6,6 +6,7 @@ import SearchUser from "../SearchUser/SearchUser"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 
+import "./Users.css"
 
 function Users(){
     return(
