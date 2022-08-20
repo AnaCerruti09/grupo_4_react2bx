@@ -72,7 +72,7 @@ function SearchProduct(){
 							<form method="GET" onSubmit={search}>
 								<div className="form-group">
 									<label htmlFor="">Buscar por cirterio:</label>
-                                    <select name="searchCriteria" onSelect={setKeywordCriteria()}>
+                                    <select name="searchCriteria" onSelect={ () => setKeywordCriteria()}>
                                         <option ref={inputCriteria} value="location_id">Locación</option>
                                         <option ref={inputCriteria} value="sport_id">Deporte</option>
                                     </select>
