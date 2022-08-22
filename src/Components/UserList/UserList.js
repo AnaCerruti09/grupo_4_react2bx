@@ -1,5 +1,7 @@
 import React from "react"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
+import "./UserList.css"
 
 function UserList(){
     const [users, setUsers] = useState([])
@@ -61,8 +63,10 @@ function UserList(){
 
     return(
     <React.Fragment>
+    <div className="sectionList">
+        <div className="TitleListContainer"><h2 className="ListTitle">User List</h2></div>
         <div className="ContainerList">
-            <div className="TitleListContainer"><h2 className="ListTitle">User List</h2></div>
+            
             <div className="ListContent">
                 
             <table className="Table">
@@ -71,6 +75,7 @@ function UserList(){
             <th className="tableHeader">Nombre</th>
             <th className="tableHeader">Apellido</th>
             <th className="tableHeader">Mail</th>
+            <th className="tableHeader">Fecha de Nac.</th>
           </tr>
         </thead>
         <tbody>
@@ -78,7 +83,8 @@ function UserList(){
             <tr className="tableRowItems" key={el.id}>
               <td className="tableCell">{el.name}</td>
               <td className="tableCell">{el.last_name}</td>
-              <td className="tableCell">{el.email}</td>
+              <td className="tableCell"><Link to={`/api/users/${el.id}`} style={{ textDecoration: 'none' }}>{el.email}</Link></td>
+              <td className="tableCell">{el.birth_date}</td>
             </tr>
           ))}
         </tbody>
@@ -88,19 +94,20 @@ function UserList(){
       {range.map((el, index) => (
         <button
           key={index}
-        //   className={`${styles.button} ${
-        //     page === el ? styles.activeButton : styles.inactiveButton
-        //   }`}
+           className={`${"buttonList"} ${
+             page === el ? " activeButton" : " inactiveButton"
+           }`}
           onClick={() => setPage(el)}
         >
           {el}
         </button>
       ))}
-    </div>          
+      </div>          
                 
 
-            </div>
-        </div>
+    </div>
+    </div>
+    </div>
     </React.Fragment>
     )
 }

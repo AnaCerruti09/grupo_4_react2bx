@@ -1,5 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 
 function ProductList(){
@@ -63,8 +64,10 @@ function ProductList(){
 
     return(
     <React.Fragment>
+      <div className="sectionList">
+      <div className="TitleListContainer"><h2 className="ListTitle">Activities List</h2></div>
         <div className="ContainerList">
-            <div className="TitleListContainer"><h2 className="ListTitle">User List</h2></div>
+            
             <div className="ListContent">
                 
             <table className="Table">
@@ -79,10 +82,10 @@ function ProductList(){
         <tbody>
           {slice.map((el) => (
             <tr className="tableRowItems" key={el.id}>
-              <td className="tableCell">{el.name}</td>
+              <td className="tableCell"><Link to={`/api/package/${el.id}`} style={{ textDecoration: 'none' }}>{el.name}</Link></td>
               <td className="tableCell">{el.Sport.name}</td>
               <td className="tableCell">{el.Location.province}</td>
-              <td className="tableCell">{el.price}</td>
+              <td className="tableCell">$ {el.price}</td>
             </tr>
           ))}
         </tbody>
@@ -92,19 +95,20 @@ function ProductList(){
       {range.map((el, index) => (
         <button
           key={index}
-        //   className={`${styles.button} ${
-        //     page === el ? styles.activeButton : styles.inactiveButton
-        //   }`}
-          onClick={() => setPage(el)}
-        >
+            className={`${"buttonList"} ${
+            page === el ? " activeButton" : " inactiveButton"
+          }`}
+            onClick={() => setPage(el)}
+      >
           {el}
-        </button>
+      </button>
       ))}
     </div>          
                 
 
-            </div>
-        </div>
+    </div>
+    </div>
+    </div>
     </React.Fragment>
     )
 

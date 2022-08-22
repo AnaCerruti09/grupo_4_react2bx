@@ -12,7 +12,6 @@ function SearchProduct(){
 
 	const inputCriteria = useRef()
     const inputValue = useRef()
-	
 
     useEffect(() => {
         const apiLocations= "http://localhost:3030/api/locations"
@@ -50,7 +49,8 @@ function SearchProduct(){
 			if(data.data == undefined) {
 				setProducts([])
 			}else{
-				setProducts(data.data)}})
+				setProducts(data.data)}
+            console.log(data.data)})
 		.catch(error => console.log(error))
  
 	}, [keywordValue])
@@ -61,6 +61,8 @@ function SearchProduct(){
 
 		setKeywordCriteria(inputCriteria.current.value)
         setKeywordValue(inputValue.current.value)
+        console.log(inputValue)
+        console.log(inputCriteria)
 	}
 
 	return(
@@ -80,7 +82,7 @@ function SearchProduct(){
                                     {locations.length >0 && locations.map((location,i)=>{
                                         return(
                                             
-                                                <option ref={inputValue} value={location.id}>{location.name}</option>
+                                                <option key={i} ref={inputValue} value={location.id}>{location.name}</option>
                                                 
                                         
                                         )
@@ -91,7 +93,7 @@ function SearchProduct(){
                                     {sports.length >0 && sports.map((sport,i)=>{
                                         return(
                                             
-                                                <option ref={inputValue} value={sport.id}>{sport.name}</option>
+                                                <option key={i} ref={inputValue} value={sport.id}>{sport.name}</option>
                                                 
                                         
                                         )

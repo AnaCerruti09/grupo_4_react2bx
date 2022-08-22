@@ -6,6 +6,8 @@ import Users from "../Users/Users"
 import Products from "../Products/Products"
 import SearchUser from "../SearchUser/SearchUser"
 import SearchProduct from "../SearchProduct/SearchProduct"
+import UserDetail from "../UserDetail/UserDetail"
+import ProductDetail from "../ProductDetail/ProductDetail"
 import NotFound from "../NotFound/NotFound"
 
 import Logo from "../../Assets/img/Logo1FondoNegro.jpg"
@@ -54,6 +56,14 @@ function SideBar(){
 
             <Route path="/SearchUser"> 
                 <SearchUser />
+            </Route>
+
+            <Route path="/api/users/:id"> 
+                <UserDetail />
+            </Route>
+
+            <Route path="/api/package/:id"> 
+                <ProductDetail />
             </Route>
 
             <Route> 
