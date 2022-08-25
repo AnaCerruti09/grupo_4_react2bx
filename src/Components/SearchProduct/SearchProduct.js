@@ -127,8 +127,8 @@ function SearchProduct(){
 														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
 												</div>
-												<p>{product.Location.name}</p>
-                                                <p>{product.Sports.Name}</p>
+												<p>{product.Location.province}</p>
+                                                <p>{product.Sport.name}</p>
                                                 <p>{product.price}</p>
 											</div>
 										

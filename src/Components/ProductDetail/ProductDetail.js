@@ -19,7 +19,7 @@ function ProductDetail(){
         .then(res => res.json())
         .then(data => {
             setProduct(data.data)
-                  
+            console.log(product)                  
         })
         .catch(error => console.log(error))
     }, [])
@@ -40,7 +40,7 @@ function ProductDetail(){
                         { product !=={} && 
                            <div className="cardLast"> 
                             <img className="IconUser" src={IconUser} alt="icono usuario" />
-                            <h5>{product.name} - {product.Location.name}</h5>
+                            <h5>{product.name} - {product.Location.geo_region}</h5>
                             <span>{product.price}</span>
                             <p>{product.Sport.name}</p>
                             <p>{product.description}</p>
