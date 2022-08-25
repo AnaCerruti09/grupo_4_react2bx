@@ -17,11 +17,11 @@ function SearchProduct(){
         const apiLocations= "http://localhost:3030/api/locations"
         const apiSports = "http://localhost:3030/api/sports"
 
-        if(keywordCriteria == "location_id"){
+        if(keywordCriteria === "location_id"){
             fetch(apiLocations)
             .then(res => res.json())
             .then(data => {
-                if(data.data == undefined) {
+                if(data.data === undefined) {
                     setLocations([])
                 }else{
                     setLocations(data.data)}})
@@ -30,7 +30,7 @@ function SearchProduct(){
             fetch(apiSports)
             .then(res => res.json())
             .then(data => {
-                if(data.data == undefined) {
+                if(data.data === undefined) {
                     setSports([])
                 }else{
                     setSports(data.data)}})
@@ -46,14 +46,14 @@ function SearchProduct(){
 		fetch(API)
 		.then(res => res.json())
 		.then(data => {
-			if(data.data == undefined) {
+			if(data.data === undefined) {
 				setProducts([])
 			}else{
 				setProducts(data.data)}
-            console.log(data.data)})
+            	})
 		.catch(error => console.log(error))
  
-	}, [keywordValue])
+	}, [keywordValue, keywordCriteria])
 
 
 	const search= (e) => {
@@ -61,8 +61,8 @@ function SearchProduct(){
 
 		setKeywordCriteria(inputCriteria.current.value)
         setKeywordValue(inputValue.current.value)
-        console.log(inputValue)
-        console.log(inputCriteria)
+        console.log("inputValue", inputValue)
+        console.log("inputCriteria", inputCriteria)
 	}
 
 	return(
@@ -71,13 +71,16 @@ function SearchProduct(){
 					<div className="SearchHead">
 						<div className="SearchForm">
 							{/* Buscador */}
-							<form method="GET" onSubmit={search}>
+							<form method="GET" onSubmit={ () => search()}>
 								<div className="form-group">
-									<label htmlFor="">Buscar por cirterio:</label>
-                                    <select name="searchCriteria" onSelect={ () => setKeywordCriteria()}>
-                                        <option ref={inputCriteria} value="location_id">Locación</option>
-                                        <option ref={inputCriteria} value="sport_id">Deporte</option>
+									<label htmlFor="">Buscar por criterio:</label>
+                                    <select name="searchCriteria" ref={inputCriteria} onSelect={ (value) => setKeywordCriteria(value)}>
+										<option  value="" disabled>Elige</option>
+										<option  value="sport_id">Deporte</option>
+                                        <option  value="location_id">Locación</option>
+                                        
                                     </select>
+
                                     <select name="searchValue">
                                     {locations.length >0 && locations.map((location,i)=>{
                                         return(
@@ -140,7 +143,7 @@ function SearchProduct(){
 					
 					{products.length === 0 && (
             			<div className="AlertSearch">
-             				 No se encontraron usuarios
+             				 No se encontraron productos
             			</div>
           			)}
 
