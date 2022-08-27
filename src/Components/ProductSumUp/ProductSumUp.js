@@ -3,6 +3,7 @@ import "./ProductSumUp.css"
 
 import { useState, useEffect } from "react"
 import ActivitiesBySports from "../ActivitiesBySports/ActivitiesBySports"
+import ActivitiesByLocations from "../ActivitiesByLocation/ActivitiesByLocations"
 
 function ProductSumUp(){
     const [products, setProducts] = useState([])
@@ -49,6 +50,7 @@ function ProductSumUp(){
 
             </div>
             <ActivitiesBySports />
+            <ActivitiesByLocations />
         </div>
     </React.Fragment>
     )
