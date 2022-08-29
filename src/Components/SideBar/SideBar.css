@@ -20,16 +20,33 @@
 }
 
 .NavigationLink{
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 5px;
     padding-left: 10px;
-    border-bottom: 1px solid #79ffa0;
-    color: #79ffa0;
+    font-size: 18px;
+    font-weight: lighter;
+}
+.NavigationLink:hover{
+    border-bottom: 2px solid #212529;
+    color: black;
+    background-color: #79ffa0;
+    opacity: 100%;
 }
 
 .Link{
     text-decoration: none;
     color: #79ffa0;
+    transition: all 130ms;
+}
+.Link:hover:active:focus{
+    text-decoration: none;
+    color: black;
+}
+
+.fa-light{
+    color:#79ffa0;
+    font-size: 30px;
+    padding: 10px;
 }
 
 

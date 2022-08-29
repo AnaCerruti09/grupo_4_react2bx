@@ -1,6 +1,7 @@
 import React from "react"
 import { useState, useEffect, useRef} from "react"
 import IconUser from "../../Assets/img/user_icon.png"
+import "./SearchUser.css"
 
 function SearchUser(){
     const [users, setUsers] = useState([])
@@ -39,20 +40,23 @@ function SearchUser(){
 							<form method="GET" onSubmit={search}>
 								<div className="form-group">
 									<label htmlFor="">Buscar por nombre:</label>
+									<div className="divSearchCenter">
 									<input ref={input} type="text" className="SearchInput" />
+									<button className="SearchButton">GO</button>
+									</div>
 								</div>
-								<button className="SearchButton">Search</button>
+								
 							</form>
 						</div>
 					</div>
-					<div className="SearchResult">
-						<div className="SearchResultTitle">
-							<h2>Usuarios con nombre: {keyword}</h2>
-						</div>
-						{/* Listado de películas */}
+					
 						{
 							users.length > 0 && users.map((user, i) => {
 								return (
+									<div className="SearchResult">
+						<div className="SearchResultTitle">
+							<h2>Usuarios con nombre: {keyword}</h2>
+						</div>
 									<div className="CardResult" key={i}>
 
 											<div className="CardHeader">
@@ -73,12 +77,13 @@ function SearchUser(){
 											</div>
 										
 									</div>
+									</div>
 								)
 							})
 						}
-					</div>
 					
-					{users.length === 0 && (
+					
+					{users.length === 0 && keyword.length>0 && (
             			<div className="AlertSearch">
              				 No se encontraron usuarios
             			</div>

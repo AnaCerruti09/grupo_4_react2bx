@@ -22,15 +22,15 @@ function SideBar(){
         </div>
         <div className="NavigationContainer">
             <ul>
-                <li className="NavigationLink"><Link to="/" style={{ textDecoration: 'none' }}><span>Main Dashboard</span></Link></li>
+                <li className="NavigationLink"><Link className="Link" to="/" style={{ textDecoration: 'none' }}> Main Dashboard</Link></li>
 
-                <li className="NavigationLink"><Link to="/Users" style={{ textDecoration: 'none' }}><span>Users Dashboard</span></Link></li>
+                <li className="NavigationLink"><Link className="Link" to="/Users" style={{ textDecoration: 'none' }}> Users Dashboard</Link></li>
 
-                <li className="NavigationLink"><Link to="/Products" style={{ textDecoration: 'none' }}><span>Products Dashboard</span></Link></li>
+                <li className="NavigationLink"><Link className="Link" to="/Products" style={{ textDecoration: 'none' }}> Products Dashboard</Link></li>
 
-                <li className="NavigationLink"><Link to="/SearchProduct" style={{ textDecoration: 'none' }}><span>Product Search</span></Link></li>
+                <li className="NavigationLink"><Link className="Link" to="/SearchProduct" style={{ textDecoration: 'none' }}> Product Search</Link></li>
 
-                <li className="NavigationLink"><Link to="/SearchUser" style={{ textDecoration: 'none' }}><span>User Search</span></Link></li>
+                <li className="NavigationLink"><Link className="Link" to="/SearchUser" style={{ textDecoration: 'none' }}> User Search</Link></li>
 
             
             </ul>

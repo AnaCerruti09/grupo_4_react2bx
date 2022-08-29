@@ -21,19 +21,19 @@ function ActivitiesByLocations(){
     <React.Fragment>
         <div className="SubContainerSumUp">
             <div className="TitleCategories"><h2 className="CategoriesTitle">Product By Location</h2></div>
-                
+            <div className="CategoriesList">
                 
                         {
                             categoriesTotal.length !== 0 && categoriesTotal.map((categorie,i) =>{
                                 return(
-                            <div key={i} className="cardTotal">
+                            <div key={i} className="cardTotalCategories">
                                 <h5>{categorie.Provincia}</h5>
                                 <span>{categorie.Count}</span>
                             </div>)
                         
                             })
                         }
-        
+            </div>
         </div>
     </React.Fragment>
     )

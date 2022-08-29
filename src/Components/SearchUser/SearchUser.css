@@ -1,0 +1,39 @@
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.SearchInput{
+    width: 70%;
+    border: 3px solid #79ffa0;
+    border-right: none;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.SearchButton{
+    width: 40px;
+    height: 30px;
+    border: 1px solid #79ffa0;
+    background: #79ffa0;
+    text-align: center;
+    color: #212529;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+.divSearchCenter{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+label{
+    margin-right: 0px;
+}
+
+h2{
+    font-size: 20px;
+}
