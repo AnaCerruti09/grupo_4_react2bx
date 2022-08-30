@@ -1,7 +1,8 @@
 import React from "react"
 
 import { useState, useEffect } from "react"
-import BarChart from "../BarChart/BarChart"
+import DonaChart from "../DonaChart/DonaChart"
+import "./ActivitiesByLocations.css"
 
 function ActivitiesByLocations(){
     const [categoriesTotal, setCategoriesTotal] = useState([])
@@ -26,15 +27,14 @@ function ActivitiesByLocations(){
 }, [])
 
     const dataChart = {
-        labels: [categoriesTotal.map(category => category.Provincia)],
+        labels: categoriesTotal.map(category => category.Provincia),
         datasets: [{
             label: "Actividades Por Deporte",
-            data:[categoriesTotal.map(category => category.Count)],
+            data: categoriesTotal.map(category => category.Count),
             backgroundColor: ["RGB(121,255,160)"]
         }],
 
     }
-
 
     return(
     // <React.Fragment>
@@ -57,7 +57,7 @@ function ActivitiesByLocations(){
     // </React.Fragment>
     <React.Fragment>
         <div className="ChartActivities">
-        <BarChart chartData={dataChart} />
+        <DonaChart chartData={dataChart} />
         </div>
     </React.Fragment>
     )

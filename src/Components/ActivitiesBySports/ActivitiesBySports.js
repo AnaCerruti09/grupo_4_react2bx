@@ -7,14 +7,6 @@ import { useState, useEffect } from "react"
 
 function ActivitiesBySports(){
     const [categoriesTotal, setCategoriesTotal] = useState([])
-    const [activityData, setActivityData] = useState({
-        labels: [],
-        datasets: [{
-            label: "",
-            data:[],
-            backgroundColor: []
-        }],
-    })
 
     const api = "http://localhost:3030/api/Package/categoriesSports/show"
 
@@ -28,17 +20,14 @@ function ActivitiesBySports(){
 }, [])
     
 
-    useEffect(()=> {
-        setActivityData(({
-            labels: [categoriesTotal.map(category => category.Deporte)],
+    const activityData = {
+            labels: categoriesTotal.map(category => category.Deporte),
             datasets: [{
                 label: "Actividades Por Deporte",
-                data: [categoriesTotal.map(category => category.Count)],
+                data: categoriesTotal.map(category => category.Count),
                 backgroundColor: ["RGB(157,59,225)"]
             }],
-            
-        }))
-    }, [categoriesTotal])
+            }
 
 
     return(

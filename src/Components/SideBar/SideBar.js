@@ -5,10 +5,11 @@ import Main from "../Main/Main"
 import Users from "../Users/Users"
 import Products from "../Products/Products"
 import SearchUser from "../SearchUser/SearchUser"
-import SearchProduct from "../SearchProduct/SearchProduct"
+// import SearchProduct from "../SearchProduct/SearchProduct"
 import UserDetail from "../UserDetail/UserDetail"
 import ProductDetail from "../ProductDetail/ProductDetail"
 import NotFound from "../NotFound/NotFound"
+import ProductCharts from "../ProductCharts/ProductCharts"
 
 import Logo from "../../Assets/img/Logo1FondoNegro.jpg"
 import "./SideBar.css"
@@ -28,7 +29,7 @@ function SideBar(){
 
                 <li className="NavigationLink"><Link className="Link" to="/Products" style={{ textDecoration: 'none' }}> Products Dashboard</Link></li>
 
-                <li className="NavigationLink"><Link className="Link" to="/SearchProduct" style={{ textDecoration: 'none' }}> Product Search</Link></li>
+                <li className="NavigationLink"><Link className="Link" to="/ProductCharts" style={{ textDecoration: 'none' }}> Product Charts</Link></li>
 
                 <li className="NavigationLink"><Link className="Link" to="/SearchUser" style={{ textDecoration: 'none' }}> User Search</Link></li>
 
@@ -51,8 +52,8 @@ function SideBar(){
                 <Products />
             </Route>
 
-            <Route path="/SearchProduct"> 
-                <SearchProduct />
+            <Route path="/ProductCharts"> 
+                <ProductCharts />
             </Route>
 
             <Route path="/SearchUser"> 

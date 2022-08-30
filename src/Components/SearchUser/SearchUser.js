@@ -49,9 +49,12 @@ function SearchUser(){
 							</form>
 						</div>
 					</div>
-					<div className="SearchResultTitle">
+					{users.length !== 0 && keyword.length>0 && (
+            			<div className="SearchResultTitle">
 							<h2>Usuarios con nombre: {keyword}</h2>
-					</div>
+						</div>
+          			)}
+					
 					<div className="SearchResult">
 						{
 							users.length > 0 && users.map((user, i) => {

@@ -93,9 +93,12 @@ label{
         object-fit: scale-down;
     
 }
-.personalDataResul{
+.personalDataResult{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.SearchContainer{
+    margin: 20px;
 }

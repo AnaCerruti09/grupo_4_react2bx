@@ -1,14 +1,10 @@
-import React from "react"
-
-import ProductSumUp from "../ProductSumUp/ProductSumUp"
-import ProductList from "../ProductList/ProductList"
-import SearchProduct from "../SearchProduct/SearchProduct"
 import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 
-import "./Products.css"
+import ActivitiesByLocations from "../ActivitiesByLocation/ActivitiesByLocations"
+import ActivitiesBySports from "../ActivitiesBySports/ActivitiesBySports"
 
-function Products(){
+function ProductCharts(){
     return(
         <div className="Products">
             <Header />
@@ -16,12 +12,12 @@ function Products(){
                 <div className="MainContent">
                     {/* <SearchProduct />
                      <br /> */}
-                    <ProductSumUp />
+                    <ActivitiesByLocations  />
                      <br />
-                    <ProductList />
+                    <ActivitiesBySports />
                 </div>
             <Footer />
         </div>)
 }
 
-export default Products
+export default ProductCharts

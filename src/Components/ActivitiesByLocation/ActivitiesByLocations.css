@@ -42,12 +42,11 @@
     font-size: 15px;
 }
 
-.ChartActivities{
+.ChartActivities2{
     background-color:#212529;
-    width: 50%;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
-
 
 @media (min-width: 426px){
     .cardTotalCategories{

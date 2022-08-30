@@ -49,8 +49,10 @@ function ProductSumUp(){
                
 
             </div>
+            <div className="ContainerCountByTotals">
             <ActivitiesBySports />
             <ActivitiesByLocations />
+            </div>
         </div>
     </React.Fragment>
     )

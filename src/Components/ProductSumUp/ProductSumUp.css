@@ -110,7 +110,12 @@ span{
     margin:5px
 }
 
-
+.ContainerCountByTotals{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+}
 
 @media (min-width: 426px){
     .ContentSumUP{
