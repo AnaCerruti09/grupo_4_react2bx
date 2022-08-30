@@ -49,14 +49,13 @@ function SearchUser(){
 							</form>
 						</div>
 					</div>
-					
+					<div className="SearchResultTitle">
+							<h2>Usuarios con nombre: {keyword}</h2>
+					</div>
+					<div className="SearchResult">
 						{
 							users.length > 0 && users.map((user, i) => {
 								return (
-									<div className="SearchResult">
-						<div className="SearchResultTitle">
-							<h2>Usuarios con nombre: {keyword}</h2>
-						</div>
 									<div className="CardResult" key={i}>
 
 											<div className="CardHeader">
@@ -68,15 +67,15 @@ function SearchUser(){
 														className="IconUser" 
 														src={IconUser}
 														alt="icono usuario"
-														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
 													/>
 												</div>
+												<div className="personalDataResult">
 												<p>{user.name}</p>
                                                 <p>{user.last_name}</p>
                                                 <p>{user.birth_date}</p>
+												</div>
 											</div>
 										
-									</div>
 									</div>
 								)
 							})
@@ -88,7 +87,7 @@ function SearchUser(){
              				 No se encontraron usuarios
             			</div>
           			)}
-
+					</div>
 				</>
 		</div>
 	)

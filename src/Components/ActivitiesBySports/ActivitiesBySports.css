@@ -17,7 +17,7 @@
 }
 
 .cardTotalCategories{
-    width: 210px;
+    width: 80%;
     background-color: #212529;
     padding: 10px;
     display: flex;
@@ -40,4 +40,24 @@
 .CategoriesTitle{
     color: #FBFBFB;
     font-size: 15px;
+}
+
+.ChartActivities{
+    background-color:#212529;
+    width: 80%;
+}
+
+
+@media (min-width: 426px){
+    .cardTotalCategories{
+        width: 20%;
+    
+}
+
+}
+
+@media (min-width: 769px){
+    .cardTotalCategories{
+        width: 15%;
+}
 }

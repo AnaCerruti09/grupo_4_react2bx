@@ -1,12 +1,12 @@
 .ContainerSumUp{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     background-color: black;
     opacity: 70%;
-    height: 40%;
+    height: 25%;
 }
 .TitleContainer{
     border-bottom: #FBFBFB solid 1px;
@@ -21,8 +21,8 @@
 .ContentSumUP{
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: #FBFBFB;
     padding: 5px;
@@ -43,7 +43,7 @@
     height: 90%;
 }
 
-.IconUser{
+.IconUser2{
         border: 50%;
         width: 50%;
         padding: 5px;
@@ -69,4 +69,28 @@ h5{
 
 span{
     margin:5px
+}
+
+
+
+@media (min-width: 426px){
+    .ContentSumUP{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+}
+
+
+
+@media (min-width: 769px){
+    .ContentSumUP{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
 }

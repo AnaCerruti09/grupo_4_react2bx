@@ -32,7 +32,7 @@ function UserSumUp(){
                     
                         { users.length !== 0 &&
                            <div className="cardLast"> 
-                            <img className="IconUser" src={IconUser} alt="icono usuario" />
+                            <img className="IconUser2" src={IconUser} alt="icono usuario" />
                             <h5>{lastUser.name}</h5>
                             <span>{lastUser.email}</span>
                            </div>
