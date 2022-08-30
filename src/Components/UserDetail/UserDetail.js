@@ -33,7 +33,7 @@ function UserDetail(){
             <br/>
             <div className="MainContentDetail"></div>
         <div className="ContainerSumUpDetail">
-            <div className="TitleContainer"><h2 className="SumUpTitle">User Sum Up Dashboard</h2></div>
+            <div className="TitleContainer"><h2 className="SumUpTitle">User Detail</h2></div>
             <div className="ContentSumUP">
                 
                     

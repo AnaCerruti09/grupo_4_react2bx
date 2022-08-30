@@ -37,7 +37,7 @@ function SideBar(){
             
             </ul>
         </div>
-        <div className="filler"></div>
+        {/* <div className="filler"></div> */}
     </div>
 
         <Switch>

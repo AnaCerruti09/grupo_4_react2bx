@@ -1,5 +1,4 @@
 import React from "react"
-import IconUser from "../../Assets/img/user_icon.png"
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
@@ -9,17 +8,20 @@ import Footer from "../Footer/Footer"
 function ProductDetail(){
 
     const [product, setProduct] = useState({})
+    const [location, setLocation] = useState({})
+    const [sport, setSport] = useState({})
     
     const {id} = useParams()
-
-    const api = `http://localhost:3030/api/package/${id}`
+  
+    const API = `http://localhost:3030/api/package/${id}`
 
     useEffect(()=>{
-        fetch(api)
+        fetch(API)
         .then(res => res.json())
         .then(data => {
             setProduct(data.data)
-            console.log(product)                  
+            setLocation(data.data.Location)
+            setSport(data.data.Sport)
         })
         .catch(error => console.log(error))
     }, [])
@@ -33,16 +35,15 @@ function ProductDetail(){
             <br/>
             <div className="MainContent"></div>
         <div className="ContainerSumUp">
-            <div className="TitleContainer"><h2 className="SumUpTitle">User Sum Up Dashboard</h2></div>
+            <div className="TitleContainer"><h2 className="SumUpTitle">Activity Detail</h2></div>
             <div className="ContentSumUP">
                 
                     
                         { product !=={} && 
                            <div className="cardLast"> 
-                            <img className="IconUser" src={IconUser} alt="icono usuario" />
-                            <h5>{product.name} - {product.Location.geo_region}</h5>
-                            <span>{product.price}</span>
-                            <p>{product.Sport.name}</p>
+                            <h5>{product.name} {location.geo_region}</h5>
+                            <span>${product.price}</span>
+                            <p>{sport.name}</p>
                             <p>{product.description}</p>
                            </div>
                         }
