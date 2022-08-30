@@ -113,8 +113,9 @@ span{
 .ContainerCountByTotals{
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
 }
 
 @media (min-width: 426px){
@@ -134,6 +135,14 @@ span{
     .SumUpTitle{
         font-weight: 1rem;
     }
+    .ContainerCountByTotals{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 
@@ -141,8 +150,9 @@ span{
 @media (min-width: 769px){
     .ContentSumUP{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        width: 100%;
         align-items: center;
     }
     .cardLast{
@@ -158,4 +168,13 @@ span{
     .SumUpTitle{
         font-weight: 1.5rem;
     }  
+    .ContainerCountByTotals{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
 }
+

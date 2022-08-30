@@ -56,7 +56,7 @@ function ActivitiesByLocations(){
     //     </div>
     // </React.Fragment>
     <React.Fragment>
-        <div className="ChartActivities">
+        <div className="ChartActivities2">
         <DonaChart chartData={dataChart} />
         </div>
     </React.Fragment>

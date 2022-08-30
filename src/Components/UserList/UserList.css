@@ -25,7 +25,7 @@
     width: 100%;
     font-weight: 500;
     text-align: left;
-    font-size: 16px;
+    font-size: 0.7rem;
     color: #f1f1f1;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -70,9 +70,8 @@
   .tableHeader {
     background-color: #212529;
     padding: 12px;
-    font-weight: 700;
     text-align: left;
-    font-size: 14px;
+    font-size: 0.6rem;
     color: #f1f1f1;
     
   }
@@ -98,7 +97,7 @@
 
   .tableCell {
     padding: 12px;
-    font-size: 14px;
+    font-size: 0.6rem;
     color: #f9f9f9;
   }
 
@@ -106,10 +105,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 270px;
 
   }
   
   .ListContent {
+    width: 270px;
+    font-size: 0.65rem
+  }
+
+
+  @media (min-width: 426px){
+    .ListContent {
+      width: 500px;
+
+    }
+    .ContainerList {
+      width: 500px;
+    }
+
+}
+
+@media (min-width: 769px){
+  .ListContent {
     width: 550px;
   }
+  .ContainerList {
+    width: 550px;
+  }
+}

@@ -12,10 +12,10 @@ function ProductDetail(){
     
     const {id} = useParams()
 
-    const API = `http://localhost:3030/api/package/${id}`
+    const api = `http://localhost:3030/api/package/${id}`
 
     useEffect(()=>{
-        fetch(API)
+        fetch(api)
         .then(res => res.json())
         .then(data => {
             setProduct(data.data)

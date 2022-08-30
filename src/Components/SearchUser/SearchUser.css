@@ -1,5 +1,6 @@
 
 .SearchResult{
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -52,6 +53,7 @@ label{
 .CardResult{
     background-color: #212529;
     width: 20%;
+    min-width: 230px;
     padding: 10px;
     display: flex;
     flex-direction: column;

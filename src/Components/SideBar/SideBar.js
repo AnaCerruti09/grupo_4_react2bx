@@ -4,7 +4,8 @@ import { Route, Switch, Link } from "react-router-dom"
 import Main from "../Main/Main"
 import Users from "../Users/Users"
 import Products from "../Products/Products"
-import SearchUser from "../SearchUser/SearchUser"
+import Search from "../Search/Search"
+// import SearchUser from "../SearchUser/SearchUser"
 // import SearchProduct from "../SearchProduct/SearchProduct"
 import UserDetail from "../UserDetail/UserDetail"
 import ProductDetail from "../ProductDetail/ProductDetail"
@@ -57,7 +58,7 @@ function SideBar(){
             </Route>
 
             <Route path="/SearchUser"> 
-                <SearchUser />
+                <Search />
             </Route>
 
             <Route path="/api/users/:id"> 

@@ -44,8 +44,9 @@
 
 .ChartActivities{
     background-color:#212529;
-    width: 50%;
+    width: 80%;
     height: 150px;
+    border-radius: 25px;
 }
 
 
@@ -54,6 +55,10 @@
         width: 20%;
     
 }
+    .ChartActivities{
+        width: 50%;
+        height: 300px;
+    }
 
 }
 
@@ -61,4 +66,8 @@
     .cardTotalCategories{
         width: 15%;
 }
+    .ChartActivities{
+    width: 50%;
+    height: 400px;
+}   
 }

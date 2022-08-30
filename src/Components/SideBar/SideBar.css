@@ -44,9 +44,11 @@
 }
 .NavigationLink:hover{
     border-bottom: 2px solid #212529;
-    color: black;
     background-color: #79ffa0;
     opacity: 100%;
+}
+.NavigationLink .Link:hover{
+    color: #212529;
 }
 
 .Link{
@@ -54,9 +56,9 @@
     color: #79ffa0;
     transition: all 130ms;
 }
-.Link:hover:active:focus{
+.Link:hover{
     text-decoration: none;
-    color: black;
+    color: #212529;
 }
 
 @media (min-width: 426px){
