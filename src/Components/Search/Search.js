@@ -10,7 +10,7 @@ function Search(){
         <div className="MainSearchView">
             <Header />
                 <br/>
-                <div className="MainContent">
+                <div className="MainContentB">
                     <SearchUser  />
                 </div>
             <Footer />

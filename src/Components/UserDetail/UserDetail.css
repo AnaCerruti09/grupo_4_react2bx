@@ -4,11 +4,9 @@
     height: 100%;
 }
 .MainContentDetail{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+
     padding: 20px;
+    min-height: 100vh;
 }
 
 .ContainerSumUpDetail{
@@ -48,7 +46,7 @@
     color: #FBFBFB;
     height: 90%;
 }
-.cardLast:hover{
+.cardLastDetail:hover{
     background-color: #FBFBFB;
     opacity: 95%;
     color: #212529;

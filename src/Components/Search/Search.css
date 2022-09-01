@@ -7,11 +7,11 @@
 
 }
 
-.MainContent{
+.MainContentB{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content:flex-start;
+    align-items: flex-start;
     min-height: 100vh;
 }
 

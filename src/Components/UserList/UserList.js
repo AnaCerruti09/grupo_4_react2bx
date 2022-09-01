@@ -72,19 +72,19 @@ function UserList(){
             <table className="Table">
         <thead className="tableRowHeader">
           <tr>
-            <th className="tableHeader">Nombre</th>
-            <th className="tableHeader">Apellido</th>
-            <th className="tableHeader">Mail</th>
-            <th className="tableHeader">Fecha de Nac.</th>
+          <th className="tableHeader c1">Nombre</th>
+          <th className="tableHeader c2">Apellido</th>
+          <th className="tableHeader c3">Mail</th>
+          <th className="tableHeader c4">Fecha de Nac.</th>
           </tr>
         </thead>
         <tbody>
           {slice.map((el) => (
             <tr className="tableRowItems" key={el.id}>
-              <td className="tableCell">{el.name}</td>
-              <td className="tableCell">{el.last_name}</td>
-              <td className="tableCell"><Link to={`/api/users/${el.id}`} style={{ textDecoration: 'none' }}>{el.email}</Link></td>
-              <td className="tableCell">{el.birth_date}</td>
+              <td className="tableCell c1">{el.name}</td>
+              <td className="tableCell c2">{el.last_name}</td>
+              <td className="tableCell c3"><Link to={`/api/users/${el.id}`} style={{ textDecoration: 'none' }}>{el.email}</Link></td>
+              <td className="tableCell c4">{el.birth_date}</td>
             </tr>
           ))}
         </tbody>

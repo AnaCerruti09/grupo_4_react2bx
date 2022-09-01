@@ -73,19 +73,19 @@ function ProductList(){
             <table className="Table">
         <thead className="tableRowHeader">
           <tr>
-            <th className="tableHeader">Actividad</th>
-            <th className="tableHeader">Deporte</th>
-            <th className="tableHeader">Locación</th>
-            <th className="tableHeader">Precio</th>
+            <th className="tableHeader c1">Actividad</th>
+            <th className="tableHeader c2">Deporte</th>
+            <th className="tableHeader c3">Locación</th>
+            <th className="tableHeader c4">Precio</th>
           </tr>
         </thead>
         <tbody>
           {slice.map((el) => (
             <tr className="tableRowItems" key={el.id}>
-              <td className="tableCell"><Link to={`/api/package/${el.id}`} style={{ textDecoration: 'none' }}>{el.name}</Link></td>
-              <td className="tableCell">{el.Sport.name}</td>
-              <td className="tableCell">{el.Location.province}</td>
-              <td className="tableCell">$ {el.price}</td>
+              <td className="tableCell c1"><Link to={`/api/package/${el.id}`} style={{ textDecoration: 'none' }}>{el.name}</Link></td>
+              <td className="tableCell c2">{el.Sport.name}</td>
+              <td className="tableCell c3">{el.Location.province}</td>
+              <td className="tableCell c4">$ {el.price}</td>
             </tr>
           ))}
         </tbody>

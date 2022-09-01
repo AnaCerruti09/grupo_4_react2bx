@@ -33,14 +33,14 @@ function ProductDetail(){
         <div className="Users">
         <Header />
             <br/>
-            <div className="MainContent"></div>
-        <div className="ContainerSumUp">
+            <div className="MainContentDetail">
+        <div className="ContainerSumUpDetail">
             <div className="TitleContainer"><h2 className="SumUpTitle">Activity Detail</h2></div>
             <div className="ContentSumUP">
                 
                     
                         { product !=={} && 
-                           <div className="cardLast"> 
+                           <div className="cardLastDetail"> 
                             <h5>{product.name} {location.geo_region}</h5>
                             <span>${product.price}</span>
                             <p>{sport.name}</p>
@@ -52,6 +52,7 @@ function ProductDetail(){
                 
 
             </div>
+        </div>
         </div>
         <Footer />
     </div>

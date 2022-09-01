@@ -105,14 +105,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
+    width: 210px;
 
   }
   
   .ListContent {
-    width: 270px;
+    width: 210px;
     font-size: 0.65rem
   }
+
+
+  .tableHeader.c4{
+    font-size: 0px;
+    width: 0px;
+  }
+  .tableCell.c4{
+    font-size: 0px;
+    width: 0px;
+  }
+
 
 
   @media (min-width: 426px){
@@ -123,6 +134,15 @@
     .ContainerList {
       width: 500px;
     }
+    .tableHeader.c4{
+      font-size: 14px;
+      width: fit-content;
+    }
+    .tableCell.c4{
+      font-size: 14px;
+      width: fit-content;
+    }
+    
 
 }
 
@@ -132,5 +152,13 @@
   }
   .ContainerList {
     width: 550px;
+  }
+  .tableHeader.c4{
+    font-size: 14px;
+    width: fit-content;
+  }
+  .tableCell.c4{
+    font-size: 14px;
+    width: fit-content;
   }
 }
